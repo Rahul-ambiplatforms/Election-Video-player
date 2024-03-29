@@ -49,7 +49,7 @@ const VideoPlayer = ({ url, width, height }) => {
   }, [url]);
 
   return (
-    <div style={{ position: 'relative', width: `500px`, height: `300px`, backgroundColor: 'black' }}>
+    <div style={{ position: 'relative', width: `565px`, height: `300px`, overflow: `hidden`}}>
       {isBuffering && lastFrameUrl && (
         <img
           src={lastFrameUrl}
@@ -58,14 +58,21 @@ const VideoPlayer = ({ url, width, height }) => {
         />
       )}
       <video
-        ref={videoRef}
-        controls
-        width={width}
-        height={height}
-        autoPlay
-        muted
-        style={{ display: 'block', width: '100%', height: '100%', visibility: isBuffering ? 'hidden' : 'visible' }}
-      />
+  ref={videoRef}
+  controls
+  width={width}
+  height={height}
+  autoPlay
+  muted
+  style={{
+    display: 'block',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover', // Ensure the video covers the entire space without stretching
+    visibility: isBuffering ? 'hidden' : 'visible'  
+  }}
+/>
+      {/* visibility: isBuffering ? 'hidden' : 'visible'  */}
     </div>
   );
 };
