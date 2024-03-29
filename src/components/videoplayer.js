@@ -49,12 +49,12 @@ const VideoPlayer = ({ url, width, height }) => {
   }, [url]);
 
   return (
-    <div style={{ position: 'relative', width: `${width}px`, height: `${height}px` }}>
+    <div style={{ position: 'relative', width: `500px`, height: `300px`, backgroundColor: 'black' }}>
       {isBuffering && lastFrameUrl && (
         <img
           src={lastFrameUrl}
           alt="Last Frame"
-          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+          style={{display:'block', position: 'absolute', width: '100%', height: '100%', top: 0, bottom: 0, left: 0, right: 0 }}
         />
       )}
       <video
