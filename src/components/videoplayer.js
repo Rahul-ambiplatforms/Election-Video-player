@@ -49,7 +49,7 @@ const VideoPlayer = ({ url, width, height }) => {
   }, [url]);
 
   return (
-    <div style={{ position: 'relative', width: `565px`, height: `300px`, overflow: `hidden`}}>
+    <div style={{ position: 'relative', width: `565px`, height: `350px`, overflow: `hidden`}}>
       {isBuffering && lastFrameUrl && (
         <img
           src={lastFrameUrl}
