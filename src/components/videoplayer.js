@@ -68,7 +68,7 @@ const VideoPlayer = ({ url, width, height }) => {
     display: 'block',
     width: '100%',
     height: '100%',
-    objectFit: 'cover', // Ensure the video covers the entire space without stretching
+    objectFit: 'fill', // Ensure the video covers the entire space without stretching
     visibility: isBuffering ? 'hidden' : 'visible'  
   }}
 />
