@@ -10,7 +10,6 @@ const App = () => {
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160664-CCBBA.flv",
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160337-AEDEB.flv",
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160532-DEBCF.flv",
-  "wss://ptz11.vmukti.com:443/live-record/SSAM-160340-FFBFB.flv",
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160365-CFEDC.flv",
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160494-BDFDE.flv",
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160557-FAFFD.flv",
@@ -294,7 +293,8 @@ const App = () => {
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160583-BCBBF.flv",
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160509-DBFFD.flv",
   "wss://ptz11.vmukti.com:443/live-record/SSAM-160398-DEBAE.flv",
-  "wss://ptz11.vmukti.com:443/live-record/SSAM-160759-FEBDB.flv"
+  "wss://ptz11.vmukti.com:443/live-record/SSAM-160759-FEBDB.flv",
+  "wss://ptz11.vmukti.com:443/live-record/SSAM-160340-FFBFB.flv",
   ]; // Your array of video URLs
 
 
@@ -316,7 +316,7 @@ const App = () => {
         {videoUrls.slice(startIndex, endIndex).map((url, index) => (
           <div key={index} className="video-item">
             {/* Assuming VideoPlayer is a component that displays the video */}
-            <VideoPlayer url={url} width={320} height={240} />
+            <VideoPlayer url={url} />
           </div>
         ))}
       </div>
@@ -333,7 +333,6 @@ const App = () => {
   nextClassName={'next'}
   pageClassName={'page'}
   breakClassName={'break'}
-  disableInitialCss={true}
 />
 
     </div>
